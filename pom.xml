@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.testing</groupId>
+    <artifactId>JmeterProjectDemo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>JmeterProjectDemo</name>
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jmeter.fileName>JmeterDemo</jmeter.fileName>
+        <!-- 测试结果存放路径 -->
+        <jmeter.result.jtl.dir>${project.build.directory}\jmeter\results</jmeter.result.jtl.dir>
+        <!-- 测试报表存放路径 -->
+        <jmeter.result.html.dir>${project.build.directory}\jmeter\html</jmeter.result.html.dir>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.lazerycode.jmeter</groupId>
+                <artifactId>jmeter-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <!-- 指定jmeter版本 -->
+                    <jmeterVersion>5.3</jmeterVersion>
+                    <!-- 设置jmeter生成结果文件格式 -->
+                    <resultsFileFormat>xml</resultsFileFormat>
+                    <!-- 设置忽略失败是否停止运行 -->
+                    <ignoreResultFailures>true</ignoreResultFailures>
+                    <!--设置结果是否有时间戳 -->
+                    <testResultsTimestamp>false</testResultsTimestamp>
+                    <testFilesIncluded>
+                        <!-- //指定运行的jmeter脚本 -->
+                        <jMeterTestFile>${jmeter.fileName}.jmx</jMeterTestFile>
+                    </testFilesIncluded>
+                    <!-- 指定jtl生成目录 -->
+                    <resultsDirectory>${jmeter.result.jtl.dir}</resultsDirectory>
+                    <propertiesJMeter>
+                        <CookieManager.save.cookies>true</CookieManager.save.cookies>
+                        <overrideRootLogLevel>debug</overrideRootLogLevel>
+                        <sampleresult.default.encoding>utf-8</sampleresult.default.encoding>
+                        <jmeter.save.saveservice.data_type>true</jmeter.save.saveservice.data_type>
+                        <jmeter.save.saveservice.label>true</jmeter.save.saveservice.label>
+                        <jmeter.save.saveservice.response_code>true</jmeter.save.saveservice.response_code>
+                        <jmeter.save.saveservice.response_data>true</jmeter.save.saveservice.response_data>
+                        <jmeter.save.saveservice.response_data.on_error>false
+                        </jmeter.save.saveservice.response_data.on_error>
+                        <jmeter.save.saveservice.response_message>true</jmeter.save.saveservice.response_message>
+                        <jmeter.save.saveservice.successful>true</jmeter.save.saveservice.successful>
+                        <jmeter.save.saveservice.thread_name>true</jmeter.save.saveservice.thread_name>
+                        <jmeter.save.saveservice.time>true</jmeter.save.saveservice.time>
+                        <jmeter.save.saveservice.subresults>false</jmeter.save.saveservice.subresults>
+                        <jmeter.save.saveservice.assertions>true</jmeter.save.saveservice.assertions>
+                        <jmeter.save.saveservice.latency>true</jmeter.save.saveservice.latency>
+                        <jmeter.save.saveservice.connect_time>true</jmeter.save.saveservice.connect_time>
+                        <jmeter.save.saveservice.samplerData>true</jmeter.save.saveservice.samplerData>
+                        <jmeter.save.saveservice.responseHeaders>true</jmeter.save.saveservice.responseHeaders>
+                        <jmeter.save.saveservice.requestHeaders>true</jmeter.save.saveservice.requestHeaders>
+                        <jmeter.save.saveservice.encoding>true</jmeter.save.saveservice.encoding>
+                        <jmeter.save.saveservice.bytes>true</jmeter.save.saveservice.bytes>
+                        <jmeter.save.saveservice.sent_bytes>true</jmeter.save.saveservice.sent_bytes>
+                        <jmeter.save.saveservice.url>true</jmeter.save.saveservice.url>
+                        <jmeter.save.saveservice.filename>true</jmeter.save.saveservice.filename>
+                        <jmeter.save.saveservice.hostname>true</jmeter.save.saveservice.hostname>
+                        <jmeter.save.saveservice.thread_counts>true</jmeter.save.saveservice.thread_counts>
+                        <jmeter.save.saveservice.sample_count>true</jmeter.save.saveservice.sample_count>
+                        <jmeter.save.saveservice.idle_time>true</jmeter.save.saveservice.idle_time>
+                    </propertiesJMeter>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>configuration</id>
+                        <goals>
+                            <goal>configure</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>jmeter-tests</id>
+                        <goals>
+                            <goal>jmeter</goal>
+                        </goals>
+                    </execution>
+                    <!-- 设置ignoreResultFailures，必须把 jmeter-check-results加上-->
+                    <execution>
+                        <id>jmeter-check-results</id>
+                        <goals>
+                            <goal>results</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <!--根据xsl模版把jtl文件转换成html -->
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>xml-maven-plugin</artifactId>
+                <version>1.0.2</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>transform</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <transformationSets>
+                        <transformationSet>
+                            <dir>${jmeter.result.jtl.dir}</dir>
+                            <stylesheet>src\test\resources\jmeter-results-detail-report.xsl</stylesheet>
+                            <outputDir>${jmeter.result.html.dir}</outputDir>
+                            <!-- 把jtl格式转传承html -->
+                            <fileMappers>
+                                <fileMapper
+                                        implementation="org.codehaus.plexus.components.io.filemappers.FileExtensionMapper">
+                                    <targetExtension>html</targetExtension>
+                                </fileMapper>
+                            </fileMappers>
+                        </transformationSet>
+                    </transformationSets>
+                </configuration>
+                <!-- using XSLT 2.0 -->
+                <dependencies>
+                    <dependency>
+                        <groupId>net.sf.saxon</groupId>
+                        <artifactId>saxon</artifactId>
+                        <version>8.7</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-resources</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <!-- 复制测试报告图标到/jmeter/html文件夹下 -->
+                            <outputDirectory>${jmeter.result.html.dir}</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${basedir}/src/test/resources</directory>
+                                    <includes>
+                                        <include>collapse.png</include>
+                                        <include>expand.png</include>
+                                    </includes>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
