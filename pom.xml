@@ -43,10 +43,10 @@
                     <testResultsTimestamp>false</testResultsTimestamp>
                     <testFilesIncluded>
                         <!-- //指定运行的jmeter脚本 -->
-                        <jMeterTestFile>${project.build.directory}\jmeter\results</jMeterTestFile>
+                        <jMeterTestFile>${jmeter.fileName}.jmx</jMeterTestFile>
                     </testFilesIncluded>
                     <!-- 指定jtl生成目录 -->
-                    <resultsDirectory>${jmeter.result.jtl.dir}</resultsDirectory>
+                    <resultsDirectory>${project.build.directory}\jmeter\results</resultsDirectory>
                     <propertiesJMeter>
                         <CookieManager.save.cookies>true</CookieManager.save.cookies>
                         <overrideRootLogLevel>debug</overrideRootLogLevel>
