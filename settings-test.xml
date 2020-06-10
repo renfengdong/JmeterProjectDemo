@@ -186,10 +186,6 @@ under the License.
         -->
         <profile>
             <id>JmeterDemo</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-                <jdk>1.8</jdk>
-            </activation>
             <properties>
                 <jmeter.fileName>JmeterDemo</jmeter.fileName>
             </properties>
@@ -197,10 +193,6 @@ under the License.
 
         <profile>
             <id>APITest_systemserver</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-                <jdk>1.8</jdk>
-            </activation>
             <properties>
                 <jmeter.fileName>APITest_systemserver</jmeter.fileName>
             </properties>
