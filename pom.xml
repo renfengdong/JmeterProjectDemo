@@ -14,7 +14,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jmeter.fileName>JmeterDemo</jmeter.fileName>
+        <jmeter.fileName>${jmeter.fileName}</jmeter.fileName>
+<!--        <jmeter.fileName>APITest_systemserver</jmeter.fileName>-->
         <!-- 测试结果存放路径 -->
         <jmeter.result.jtl.dir>${project.build.directory}\jmeter\results</jmeter.result.jtl.dir>
         <!-- 测试报表存放路径 -->
@@ -23,10 +24,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.20</version>
         </dependency>
     </dependencies>
 

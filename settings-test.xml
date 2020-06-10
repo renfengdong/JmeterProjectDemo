@@ -196,13 +196,13 @@ under the License.
         </profile>
 
         <profile>
-            <id>CBS_AppRegister</id>
+            <id>APITest_systemserver</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
                 <jdk>1.8</jdk>
             </activation>
             <properties>
-                <jmeter.fileName>CBS_AppRegister_*</jmeter.fileName>
+                <jmeter.fileName>APITest_systemserver</jmeter.fileName>
             </properties>
         </profile>
 
