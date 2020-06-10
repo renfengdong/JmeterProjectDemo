@@ -120,6 +120,7 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
+                            <useDefaultDelimiters>true</useDefaultDelimiters>
                             <!-- 复制测试报告图标到/jmeter/html文件夹下 -->
                             <outputDirectory>${jmeter.result.html.dir}</outputDirectory>
                             <resources>
