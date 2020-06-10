@@ -15,11 +15,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jmeter.fileName>${jmeter.fileName}</jmeter.fileName>
-<!--        <jmeter.fileName>JmeterDemo</jmeter.fileName>-->
-        <!-- 测试结果存放路径 -->
-        <jmeter.result.jtl.dir>${project.build.directory}\jmeter\results</jmeter.result.jtl.dir>
-        <!-- 测试报表存放路径 -->
-        <jmeter.result.html.dir>${project.build.directory}\jmeter\html</jmeter.result.html.dir>
+        <!--        <jmeter.fileName>JmeterDemo</jmeter.fileName>-->
     </properties>
 
     <dependencies>
@@ -47,7 +43,7 @@
                     <testResultsTimestamp>false</testResultsTimestamp>
                     <testFilesIncluded>
                         <!-- //指定运行的jmeter脚本 -->
-                        <jMeterTestFile>${jmeter.fileName}.jmx</jMeterTestFile>
+                        <jMeterTestFile>${project.build.directory}\jmeter\results</jMeterTestFile>
                     </testFilesIncluded>
                     <!-- 指定jtl生成目录 -->
                     <resultsDirectory>${jmeter.result.jtl.dir}</resultsDirectory>
@@ -107,7 +103,6 @@
                 </executions>
             </plugin>
 
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
@@ -120,9 +115,8 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <useDefaultDelimiters>true</useDefaultDelimiters>
                             <!-- 复制测试报告图标到/jmeter/html文件夹下 -->
-                            <outputDirectory>${jmeter.result.html.dir}</outputDirectory>
+                            <outputDirectory>${project.build.directory}\jmeter\html</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>${basedir}/src/test/resources</directory>
