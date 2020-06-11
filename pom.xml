@@ -15,7 +15,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jmeter.fileName>${jmeter.fileName}</jmeter.fileName>
-        <!--        <jmeter.fileName>JmeterDemo</jmeter.fileName>-->
+<!--                <jmeter.fileName>JmeterDemo</jmeter.fileName>-->
     </properties>
 
     <dependencies>
@@ -102,7 +102,27 @@
                     </execution>
                 </executions>
             </plugin>
-
+            <!--拷贝dependencies添加的jar包到lib目录下-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.2</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/jmeter/lib</outputDirectory>
+                            <overWriteReleases>false</overWriteReleases>
+                            <overWriteSnapshots>false</overWriteSnapshots>
+                            <overWriteIfNewer>true</overWriteIfNewer>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
