@@ -15,7 +15,7 @@
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="request_common数据文件" enabled="true">
         <stringProp name="delimiter">,</stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
-        <stringProp name="filename">${filepath}/request_common.txt</stringProp>
+        <stringProp name="filename">../resources/data/request_common.txt</stringProp>
         <boolProp name="ignoreFirstLine">true</boolProp>
         <boolProp name="quotedData">false</boolProp>
         <boolProp name="recycle">true</boolProp>
@@ -27,7 +27,7 @@
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="request_users数据文件" enabled="true">
         <stringProp name="delimiter">,</stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
-        <stringProp name="filename">${filepath}/users.csv</stringProp>
+        <stringProp name="filename">../resources/data/users.txt</stringProp>
         <boolProp name="ignoreFirstLine">true</boolProp>
         <boolProp name="quotedData">false</boolProp>
         <boolProp name="recycle">true</boolProp>
@@ -36,21 +36,6 @@
         <stringProp name="variableNames">username,password</stringProp>
       </CSVDataSet>
       <hashTree/>
-      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的全局变量" enabled="true">
-        <collectionProp name="Arguments.arguments">
-          <elementProp name="filepath" elementType="Argument">
-            <stringProp name="Argument.name">filepath</stringProp>
-            <stringProp name="Argument.value">../resources/data</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="environment" elementType="Argument">
-            <stringProp name="Argument.name">environment</stringProp>
-            <stringProp name="Argument.value">dev</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-        </collectionProp>
-      </Arguments>
-      <hashTree/>
       <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="mysql_JDBC_Configuration" enabled="true">
         <boolProp name="autocommit">true</boolProp>
         <stringProp name="checkQuery"></stringProp>
@@ -58,7 +43,7 @@
         <stringProp name="connectionProperties"></stringProp>
         <stringProp name="dataSource">mysql</stringProp>
         <stringProp name="dbUrl">jdbc:mysql://101.37.32.199:3306/medicine_cloud?serverTimezone=UTC&amp;characterEncoding=utf-8</stringProp>
-        <stringProp name="driver">com.mysql.jdbc.Driver</stringProp>
+        <stringProp name="driver">com.mysql.cj.jdbc.Driver</stringProp>
         <stringProp name="initQuery"></stringProp>
         <boolProp name="keepAlive">true</boolProp>
         <stringProp name="password">Jwkj2020!!@</stringProp>
@@ -104,10 +89,7 @@
           <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
         </CookieManager>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="九医云大后台接口自动化测试" enabled="true">
-          <boolProp name="TransactionController.includeTimers">false</boolProp>
-          <boolProp name="TransactionController.parent">true</boolProp>
-        </TransactionController>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="九医云大后台接口自动化测试" enabled="true"/>
         <hashTree>
           <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC-验证测试账号数据库是否存在" enabled="true">
             <stringProp name="dataSource">mysql</stringProp>
@@ -250,40 +232,9 @@
                   <stringProp name="script">${__setProperty(JSESSIONID,${COOKIE_JSESSIONID},)};</stringProp>
                 </BeanShellPostProcessor>
                 <hashTree/>
-                <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell-登录-保存未成功的响应信息" enabled="true">
-                  <boolProp name="resetInterpreter">false</boolProp>
-                  <stringProp name="parameters"></stringProp>
-                  <stringProp name="filename"></stringProp>
-                  <stringProp name="script">import java.io.IOException;
-
-public void saveErrorResponse() throws IOException{
- String response_data = prev.getResponseDataAsString();
- if (response_data.indexOf(&quot;access_token&quot;) &lt;0){
-  String filename = &quot;${filepath}/errorResponse/Case1_APITest_HM_91medicine_Login_error.txt&quot;;
-  String data = ${__threadNum} + &quot;,&quot; + response_data;
-  try {
-       writer = new FileWriter(filename,true);
-       BufferedWriter bw = new BufferedWriter(writer);
-       bw.write(data);
-       bw.write(&quot;\r\n&quot;);
-       bw.flush();
-       writer.flush();
-       bw.close();
-       writer.close();
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
- }
-}
-saveErrorResponse();</stringProp>
-                </BeanShellPostProcessor>
-                <hashTree/>
               </hashTree>
             </hashTree>
-            <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="/user 获取当前用户信息" enabled="true">
-              <boolProp name="TransactionController.includeTimers">false</boolProp>
-              <boolProp name="TransactionController.parent">true</boolProp>
-            </TransactionController>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="/user 获取当前用户信息" enabled="true"/>
             <hashTree>
               <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="0-/user 获取登录用户信息" enabled="true">
                 <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
@@ -345,40 +296,9 @@ saveErrorResponse();</stringProp>
                   <intProp name="Assertion.test_type">16</intProp>
                 </ResponseAssertion>
                 <hashTree/>
-                <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell-登录-保存未成功的响应信息" enabled="true">
-                  <boolProp name="resetInterpreter">false</boolProp>
-                  <stringProp name="parameters"></stringProp>
-                  <stringProp name="filename"></stringProp>
-                  <stringProp name="script">import java.io.IOException;
-
-public void saveErrorResponse() throws IOException{
- String response_data = prev.getResponseDataAsString();
- if (response_data.indexOf(&quot;uuid&quot;) &lt;0){
-  String filename = &quot;${filepath}/errorResponse/Case1_APITest_HM_91medicine_user_error.txt&quot;;
-  String data = ${__threadNum} + &quot;,&quot; + response_data;
-  try {
-       writer = new FileWriter(filename,true);
-       BufferedWriter bw = new BufferedWriter(writer);
-       bw.write(data);
-       bw.write(&quot;\r\n&quot;);
-       bw.flush();
-       writer.flush();
-       bw.close();
-       writer.close();
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
- }
-}
-saveErrorResponse();</stringProp>
-                </BeanShellPostProcessor>
-                <hashTree/>
               </hashTree>
             </hashTree>
-            <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="/user/status 更新用户状态" enabled="true">
-              <boolProp name="TransactionController.includeTimers">false</boolProp>
-              <boolProp name="TransactionController.parent">true</boolProp>
-            </TransactionController>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="/user/status 更新用户状态" enabled="true"/>
             <hashTree>
               <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="更新用户状态(禁用)" enabled="true"/>
               <hashTree>
@@ -887,6 +807,43 @@ saveErrorResponse();</stringProp>
           <hashTree/>
         </hashTree>
         <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>false</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="聚合报告" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
