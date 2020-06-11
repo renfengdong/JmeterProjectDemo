@@ -189,6 +189,9 @@ under the License.
             <properties>
                 <jmeter.fileName>JmeterDemo</jmeter.fileName>
             </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
         </profile>
 
         <profile>
