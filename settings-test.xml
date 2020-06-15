@@ -201,5 +201,12 @@ under the License.
             </properties>
         </profile>
 
+        <profile>
+            <id>APITest_doctorserver</id>
+            <properties>
+                <jmeter.fileName>APITest_doctorserver</jmeter.fileName>
+            </properties>
+        </profile>
+
     </profiles>
 </settings>
