@@ -62,7 +62,7 @@
         <stringProp name="HTTPSampler.domain">${IP}</stringProp>
         <stringProp name="HTTPSampler.port">${PORT}</stringProp>
         <stringProp name="HTTPSampler.protocol">${Protocol}</stringProp>
-        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
         <stringProp name="HTTPSampler.path"></stringProp>
         <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
         <stringProp name="HTTPSampler.connect_timeout"></stringProp>
@@ -234,7 +234,7 @@
                 <hashTree/>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="系统用户API" enabled="true"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="系统用户API" enabled="false"/>
             <hashTree>
               <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="/user 获取当前用户信息" enabled="true"/>
               <hashTree>
@@ -3530,7 +3530,7 @@ WHERE a.user_uuid=b.uuid and b.username=&apos;${username}&apos;;</stringProp>
                 </hashTree>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="科室后台api" enabled="true"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="科室后台api" enabled="false"/>
             <hashTree>
               <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="/department/manage 新增科室" enabled="true"/>
               <hashTree>
@@ -4471,7 +4471,7 @@ WHERE a.user_uuid=b.uuid and b.username=&apos;${username}&apos;;</stringProp>
                 </hashTree>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="科室api" enabled="true"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="科室api" enabled="false"/>
             <hashTree>
               <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="/department/getList 获得科室列表" enabled="true"/>
               <hashTree>
@@ -4539,7 +4539,7 @@ WHERE a.user_uuid=b.uuid and b.username=&apos;${username}&apos;;</stringProp>
                 </hashTree>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="短信api" enabled="true"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="短信api" enabled="false"/>
             <hashTree>
               <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="/sms/sendCode/{phone} 发送验证码" enabled="true"/>
               <hashTree>
@@ -4604,7 +4604,7 @@ WHERE a.user_uuid=b.uuid and b.username=&apos;${username}&apos;;</stringProp>
                 </hashTree>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="微信api" enabled="true"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="微信api" enabled="false"/>
             <hashTree>
               <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="/wechat/getOpenId/{appType}/{code} 获取小程序openId" enabled="true"/>
               <hashTree>
@@ -5103,7 +5103,7 @@ WHERE a.user_uuid=b.uuid and b.username=&apos;${username}&apos;;</stringProp>
                 </hashTree>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="区域api" enabled="true"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="区域api" enabled="false"/>
             <hashTree>
               <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="/area/list 获取所有区域数据" enabled="true"/>
               <hashTree>
@@ -5348,7 +5348,7 @@ WHERE a.user_uuid=b.uuid and b.username=&apos;${username}&apos;;</stringProp>
                 </hashTree>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="区域管理api" enabled="true"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="区域管理api" enabled="false"/>
             <hashTree>
               <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="/area/manage/queryPage 分页区域List" enabled="true"/>
               <hashTree>
