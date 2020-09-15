@@ -15,7 +15,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jmeter.fileName>${jmeter.fileName}</jmeter.fileName>
-<!--                <jmeter.fileName>JmeterDemo</jmeter.fileName>-->
+        <!--        <jmeter.fileName>APITest_BP_storeserver(QA)_flow</jmeter.fileName>-->
     </properties>
 
     <dependencies>
