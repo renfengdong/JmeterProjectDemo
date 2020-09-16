@@ -75,7 +75,7 @@
         <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
       </CookieManager>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="线程组" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="大后台创建药店总部业务" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -89,6 +89,50 @@
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="request_common数据文件" enabled="true">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="filename">../resources/data/request_common.txt</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="variableNames">Protocol,IP,PORT</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="request_users数据文件" enabled="true">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="filename">../resources/data/users.txt</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="variableNames">username,password</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP请求默认值" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${IP}</stringProp>
+          <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+          <stringProp name="HTTPSampler.protocol">${Protocol}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie管理器" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+          <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+        </CookieManager>
+        <hashTree/>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="随机生成测试数据" enabled="true"/>
         <hashTree>
           <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="随机生成公司名称" enabled="true">
@@ -259,7 +303,7 @@ vars.put(&quot;getCard&quot;,getCard);</stringProp>
           <hashTree>
             <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
-                <stringProp name="-1385626742">&lt;title&gt;九医云&lt;/title&gt;</stringProp>
+                <stringProp name="1933144251">&lt;title&gt;91-system&lt;/title&gt;</stringProp>
               </collectionProp>
               <stringProp name="Assertion.custom_message"></stringProp>
               <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -332,16 +376,9 @@ vars.put(&quot;getCard&quot;,getCard);</stringProp>
               <intProp name="Assertion.test_type">16</intProp>
             </ResponseAssertion>
             <hashTree/>
-            <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell 后置处理程序" enabled="true">
-              <boolProp name="resetInterpreter">false</boolProp>
-              <stringProp name="parameters"></stringProp>
-              <stringProp name="filename"></stringProp>
-              <stringProp name="script">${__setProperty(JSESSIONID,${COOKIE_JSESSIONID},)};</stringProp>
-            </BeanShellPostProcessor>
-            <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="入驻企业-药店管理-药店总部" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="入驻企业-药店管理-新增药店总部" enabled="true"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/system-server/account/2 获取随机account" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
@@ -403,6 +440,13 @@ vars.put(&quot;getCard&quot;,getCard);</stringProp>
               <intProp name="Assertion.test_type">16</intProp>
             </ResponseAssertion>
             <hashTree/>
+            <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell 后置处理程序" enabled="true">
+              <boolProp name="resetInterpreter">false</boolProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="script">${__setProperty(username,${account},)};</stringProp>
+            </BeanShellPostProcessor>
+            <hashTree/>
           </hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/store-server/company 新增药店" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -411,45 +455,45 @@ vars.put(&quot;getCard&quot;,getCard);</stringProp>
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-    &quot;companySaveVo&quot;:{&#xd;
-        &quot;businessScopeList&quot;:[&#xd;
-            &quot;117001&quot;,&#xd;
-            &quot;117002&quot;,&#xd;
-            &quot;117003&quot;],&#xd;
-        &quot;fileUuid&quot;:&quot;2c901e7c7304d7260173131d36250070&quot;,&#xd;
-        &quot;fileUrl&quot;:&quot;http://101.37.32.199/upload/c/2020/07/03/68cb8a665ade479cae57155a9a74b5d3.jpeg&quot;,&#xd;
-        &quot;name&quot;:&quot;${getName}医药有限公司&quot;,&#xd;
-        &quot;storeCode&quot;:&quot;3302${__time(,)}A&quot;,&#xd;
-        &quot;provinceCode&quot;:&quot;440000&quot;,&#xd;
-        &quot;cityCode&quot;:&quot;440300&quot;,&#xd;
-        &quot;areaCode&quot;:&quot;440305&quot;,&#xd;
-        &quot;phone&quot;:&quot;075526435319&quot;,&#xd;
-        &quot;businessLicenseFile&quot;:&quot;2c901e7c7304d7260173132368750071&quot;,&#xd;
-        &quot;businessLicenseUrl&quot;:&quot;http://101.37.32.199/upload/c/2020/07/03/aa85f3f473424fd0ae7f0cf00bf85e57.jpeg&quot;,&#xd;
-        &quot;expireDate&quot;:&quot;2030-12-31 00:00:00&quot;,&#xd;
-        &quot;licenseCode&quot;:&quot;91440101775674908X&quot;,&#xd;
-        &quot;address&quot;:&quot;中心路兰香一街2号海王星辰大厦22楼&quot;&#xd;
-    },&#xd;
-    &quot;businessLicenseVo&quot;:{&#xd;
-        &quot;businessLicenseUrl&quot;:&quot;http://101.37.32.199/upload/c/2020/07/03/aa85f3f473424fd0ae7f0cf00bf85e57.jpeg&quot;,&#xd;
-        &quot;expireDate&quot;:&quot;2030-12-31 00:00:00&quot;,&#xd;
-        &quot;licenseCode&quot;:&quot;91440101775674908X&quot;&#xd;
-    },&#xd;
-    &quot;employAdminVo&quot;:{&#xd;
-        &quot;employName&quot;:&quot;${getName}&quot;,&#xd;
-        &quot;employPhone&quot;:&quot;${getTelPhone}&quot;,&#xd;
-        &quot;email&quot;:&quot;${getTelPhone}@163.com&quot;,&#xd;
-        &quot;idFaceUrl&quot;:&quot;http://101.37.32.199/upload/c/2020/07/03/9585b63c1ebc48ffb1781a3a11366bcc.jpeg&quot;,&#xd;
-        &quot;idExpireDate&quot;:&quot;2025-07-31 00:00:00&quot;,&#xd;
-        &quot;idNumber&quot;:&quot;${getCard}&quot;,&#xd;
-        &quot;poaUrl&quot;:&quot;http://101.37.32.199/upload/c/2020/07/03/b51d8291b4d84b3683ec0d70136925e1.jpeg&quot;,&#xd;
-        &quot;poaExpireDate&quot;:&quot;2024-07-31 00:00:00&quot;,&#xd;
-        &quot;account&quot;:&quot;${account}&quot;,&#xd;
-        &quot;password&quot;:&quot;123456&quot;&#xd;
-    },&#xd;
-    &quot;uuid&quot;:&quot;&quot;&#xd;
-}&#xd;
-</stringProp>
+	&quot;companySaveVo&quot;: {&#xd;
+		&quot;provinceCode&quot;: &quot;330000&quot;,&#xd;
+		&quot;cityCode&quot;: &quot;330200&quot;,&#xd;
+		&quot;areaCode&quot;: &quot;330212&quot;,&#xd;
+		&quot;fileUuid&quot;: &quot;2c9ea1cd73ace07f0173ae3eb98f0000&quot;,&#xd;
+		&quot;fileUrl&quot;: &quot;https://91medicine.net:30901/upload/c/20200802/0530cefc573546bd8878f149cafaedb5.jpg&quot;,&#xd;
+		&quot;name&quot;: &quot;${getName}大药房&quot;,&#xd;
+		&quot;storeCode&quot;: &quot;3302${__time(,)}A&quot;,&#xd;
+		&quot;areaForm&quot;: &quot;&quot;,&#xd;
+		&quot;phone&quot;: &quot;075526435319&quot;,&#xd;
+		&quot;businessScopeList&quot;: [&quot;117001&quot;, &quot;117002&quot;, &quot;117003&quot;],&#xd;
+		&quot;businessLicenseFile&quot;: &quot;2c9e97bd73ace0110173ae400eba0000&quot;,&#xd;
+		&quot;businessLicenseUrl&quot;: &quot;https://91medicine.net:30901/upload/c/20200802/67b9f4e0b8eb4139b3b0c351b431d6bf.jpg&quot;,&#xd;
+		&quot;expireDate&quot;: &quot;2024-12-31 16:18:21&quot;,&#xd;
+		&quot;licenseCode&quot;: &quot;3302983878727980&quot;,&#xd;
+		&quot;address&quot;: &quot;中山东路129号&quot;&#xd;
+	},&#xd;
+	&quot;businessLicenseVo&quot;: {&#xd;
+		&quot;businessLicenseUrl&quot;: &quot;https://91medicine.net:30901/upload/c/20200802/67b9f4e0b8eb4139b3b0c351b431d6bf.jpg&quot;,&#xd;
+		&quot;expireDate&quot;: &quot;2030-12-31 16:18:21&quot;,&#xd;
+		&quot;licenseCode&quot;: &quot;3302983878727980&quot;&#xd;
+	},&#xd;
+	&quot;employAdminVo&quot;: {&#xd;
+		&quot;employName&quot;: &quot;${getName}&quot;,&#xd;
+		&quot;employPhone&quot;: &quot;${getTelPhone}&quot;,&#xd;
+		&quot;email&quot;: &quot;${getTelPhone}@163.com&quot;,&#xd;
+		&quot;idImg&quot;: [],&#xd;
+		&quot;idExpireDate&quot;: &quot;2023-08-10 16:19:25&quot;,&#xd;
+		&quot;idNumber&quot;: &quot;${getCard}&quot;,&#xd;
+		&quot;poaImg&quot;: [],&#xd;
+		&quot;poaExpireDate&quot;: &quot;2023-08-31 16:20:44&quot;,&#xd;
+		&quot;idFaceUrl&quot;: &quot;https://91medicine.net:30901/upload/c/20200802/8ca3e3dcafd34ab48388e9f46575e580.jpg&quot;,&#xd;
+		&quot;idEmblemUrl&quot;: &quot;https://91medicine.net:30901/upload/c/20200802/d95c04542b9d47b88fef066d75df3f5b.jpeg&quot;,&#xd;
+		&quot;poaUrl&quot;: &quot;https://91medicine.net:30901/upload/c/20200802/3f7f344400f44282b19a0324b752e059.jpg&quot;,&#xd;
+		&quot;account&quot;: &quot;${account}&quot;,&#xd;
+		&quot;password&quot;: &quot;123456&quot;&#xd;
+	},&#xd;
+	&quot;uuid&quot;: &quot;&quot;&#xd;
+}</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
               </collectionProp>
@@ -557,7 +601,7 @@ vars.put(&quot;getCard&quot;,getCard);</stringProp>
             <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="67791721">&quot;code&quot;:0</stringProp>
-                <stringProp name="568625316">&quot;companyName&quot;:&quot;${getName}医药有限公司&quot;</stringProp>
+                <stringProp name="1429425058">&quot;companyName&quot;:&quot;${getName}大药房&quot;</stringProp>
               </collectionProp>
               <stringProp name="Assertion.custom_message"></stringProp>
               <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -604,7 +648,7 @@ vars.put(&quot;getCard&quot;,getCard);</stringProp>
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="调试取样器" enabled="true">
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="调试取样器" enabled="false">
           <boolProp name="displayJMeterProperties">false</boolProp>
           <boolProp name="displayJMeterVariables">true</boolProp>
           <boolProp name="displaySystemProperties">false</boolProp>
