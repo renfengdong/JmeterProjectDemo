@@ -65,7 +65,7 @@
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${IP}</stringProp>
-          <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol">${Protocol}</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
           <stringProp name="HTTPSampler.path"></stringProp>
@@ -652,7 +652,7 @@ vars.put(&quot;getCard&quot;,getCard);</stringProp>
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${IP}</stringProp>
-          <stringProp name="HTTPSampler.port">${PORT}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol">${Protocol}</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
           <stringProp name="HTTPSampler.path"></stringProp>
@@ -1059,7 +1059,7 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                     <boolProp name="HTTPArgument.always_encode">false</boolProp>
                     <stringProp name="Argument.value">{&#xd;
 	&quot;roleName&quot;: &quot;${storeName}总店管理员&quot;,&#xd;
-	&quot;resourceCodeList&quot;: [&quot;parent:/base-config&quot;, &quot;BASE_CONFIG_STORE_GROUP&quot;, &quot;BASE_CONFIG_ROLE&quot;, &quot;BASE_CONFIG_AUDIT_PROCESS&quot;, &quot;BASE_CONFIG_LINE&quot;, &quot;BASE_CONFIG_STAFF&quot;, &quot;BASE_CONFIG_RESERVOIR_AREA&quot;, &quot;BASE_CONFIG_GOODS_SHELVES&quot;, &quot;BASE_CONFIG_PAY_METHODS&quot;, &quot;STORE&quot;, &quot;parent:/member&quot;, &quot;MEMBER_LIST&quot;, &quot;MEMBER_TYPE&quot;, &quot;parent:/data&quot;, &quot;parent:my&quot;, &quot;DATA_MY_COMPANY&quot;, &quot;DATA_MY_STAFF&quot;, &quot;DATA_MY_CONTRACT&quot;, &quot;parent:partner&quot;, &quot;DATA_PARTNER_COMPANY&quot;, &quot;DATA_PARTNER_STAFF&quot;, &quot;DATA_PARTNER_CONTRACT&quot;, &quot;parent:varieties&quot;, &quot;DATA_VARIETIES_DRUG&quot;, &quot;DATA_VARIETIES_INSTRUMENT&quot;, &quot;DATA_VARIETIES_FOOD&quot;, &quot;DATA_VARIETIES_OTHER&quot;, &quot;parent:/drug&quot;, &quot;GOODS_DRUG&quot;, &quot;GOODS_INSTRUMENT&quot;, &quot;GOODS_FOOD&quot;, &quot;GOODS_OTHER&quot;, &quot;parent:/stock&quot;, &quot;STOCK_DRUG&quot;, &quot;STOCK_INSTRUMENT&quot;, &quot;STOCK_FOOD&quot;, &quot;STOCK_OTHER&quot;, &quot;STOCK_REPLENISHMENT&quot;, &quot;CASH_REGISTER&quot;, &quot;parent:/store-order&quot;, &quot;ORDER_OFFLINE&quot;, &quot;parent:/integral&quot;, &quot;INTEGRAL_MALL_GOODS_CONFIG&quot;, &quot;INTEGRAL_MALL_GOODS&quot;, &quot;INTEGRAL_MALL_EXCHANGE_RECORD&quot;, &quot;parent:/purchase&quot;, &quot;PURCHASE_PLAN&quot;, &quot;PURCHASE_ORDER&quot;, &quot;parent:/warehousing&quot;, &quot;WAREHOUSING_RECEIVE&quot;, &quot;WAREHOUSING_CHECK&quot;, &quot;WAREHOUSING_ENTER&quot;, &quot;parent:/marketing&quot;, &quot;MARKETING_MODIFY_PRICE&quot;, &quot;MARKETING_CASH_BACK&quot;, &quot;MARKETING_POINTS_DEDUCTIOIN&quot;, &quot;parent:/delivery&quot;, &quot;\bDELIVERY_APPLY&quot;, &quot;\bDELIVERY_ORDER&quot;, &quot;parent:/approve&quot;, &quot;APPROVE_VARIETIES&quot;, &quot;APPROVE_COMPANY&quot;, &quot;APPROVE_STAFF&quot;, &quot;APPROVE_CONTRACT&quot;, &quot;APPROVE_PURCHASE&quot;, &quot;APPROVE_DELIVERY&quot;, &quot;MINI_PROGRAM&quot;, &quot;MINI_PROGRAM_IN&quot;, &quot;MINI_PROGRAM_OUT&quot;, &quot;MINI_PROGRAM_MOVE&quot;],&#xd;
+	&quot;resourceCodeList&quot;: [&quot;parent:/base-config&quot;, &quot;BASE_CONFIG_STORE_GROUP&quot;, &quot;BASE_CONFIG_ROLE&quot;, &quot;BASE_CONFIG_AUDIT_PROCESS&quot;, &quot;BASE_CONFIG_LINE&quot;, &quot;BASE_CONFIG_STAFF&quot;, &quot;BASE_CONFIG_RESERVOIR_AREA&quot;, &quot;BASE_CONFIG_GOODS_SHELVES&quot;, &quot;BASE_CONFIG_PAY_METHODS&quot;, &quot;BASE_CONFIG_CABINET_GROUP&quot;, &quot;BASE_CONFIG_VALIDITY_LIMIT&quot;, &quot;STORE&quot;, &quot;parent:/member&quot;, &quot;MEMBER_LIST&quot;, &quot;MEMBER_TYPE&quot;, &quot;parent:/data&quot;, &quot;parent:my&quot;, &quot;DATA_MY_COMPANY&quot;, &quot;DATA_MY_STAFF&quot;, &quot;DATA_MY_CONTRACT&quot;, &quot;parent:partner&quot;, &quot;DATA_PARTNER_COMPANY&quot;, &quot;DATA_PARTNER_STAFF&quot;, &quot;DATA_PARTNER_CONTRACT&quot;, &quot;parent:varieties&quot;, &quot;DATA_VARIETIES_DRUG&quot;, &quot;DATA_VARIETIES_INSTRUMENT&quot;, &quot;DATA_VARIETIES_FOOD&quot;, &quot;DATA_VARIETIES_OTHER&quot;, &quot;parent:/drug&quot;, &quot;GOODS_DRUG&quot;, &quot;GOODS_INSTRUMENT&quot;, &quot;GOODS_FOOD&quot;, &quot;GOODS_OTHER&quot;, &quot;parent:/stock&quot;, &quot;STOCK_DRUG&quot;, &quot;STOCK_INSTRUMENT&quot;, &quot;STOCK_FOOD&quot;, &quot;STOCK_OTHER&quot;, &quot;STOCK_REPLENISHMENT&quot;, &quot;STOCK_DETAIL&quot;, &quot;STOCK_MOVE&quot;, &quot;CASH_REGISTER&quot;, &quot;parent:/store-order&quot;, &quot;ORDER_OFFLINE&quot;, &quot;parent:/integral&quot;, &quot;INTEGRAL_MALL_GOODS_CONFIG&quot;, &quot;INTEGRAL_MALL_GOODS&quot;, &quot;INTEGRAL_MALL_EXCHANGE_RECORD&quot;, &quot;parent:/purchase&quot;, &quot;PURCHASE_PLAN&quot;, &quot;PURCHASE_ORDER&quot;, &quot;parent:/warehousing&quot;, &quot;WAREHOUSING_RECEIVE&quot;, &quot;WAREHOUSING_CHECK&quot;, &quot;WAREHOUSING_ENTER&quot;, &quot;parent:/marketing&quot;, &quot;MARKETING_MODIFY_PRICE&quot;, &quot;MARKETING_CASH_BACK&quot;, &quot;MARKETING_POINTS_DEDUCTIOIN&quot;, &quot;parent:/delivery&quot;, &quot;\bDELIVERY_APPLY&quot;, &quot;\bDELIVERY_ORDER&quot;, &quot;\bDELIVERY_RETURN_APPLY&quot;, &quot;parent:/approve&quot;, &quot;APPROVE_VARIETIES&quot;, &quot;APPROVE_COMPANY&quot;, &quot;APPROVE_STAFF&quot;, &quot;APPROVE_CONTRACT&quot;, &quot;APPROVE_PURCHASE&quot;, &quot;APPROVE_DELIVERY&quot;, &quot;APPROVE_STOCK_MOVE&quot;, &quot;MINI_PROGRAM&quot;, &quot;MINI_PROGRAM_IN&quot;, &quot;MINI_PROGRAM_OUT&quot;, &quot;MINI_PROGRAM_MOVE&quot;],&#xd;
 	&quot;uuid&quot;: &quot;&quot;&#xd;
 }</stringProp>
                     <stringProp name="Argument.metadata">=</stringProp>
@@ -1359,6 +1359,7 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                         <boolProp name="HTTPArgument.always_encode">false</boolProp>
                         <stringProp name="Argument.value">{&#xd;
 	&quot;workAt&quot;: 1,&#xd;
+	&quot;pharmacist&quot;: false,&#xd;
 	&quot;account&quot;: &quot;${account}&quot;,&#xd;
 	&quot;employName&quot;: &quot;${getName}&quot;,&#xd;
 	&quot;employPhone&quot;: &quot;${getTelPhone}&quot;,&#xd;
@@ -1674,10 +1675,6 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                             <stringProp name="Header.name">Authorization</stringProp>
                             <stringProp name="Header.value">bearer ${access_token}</stringProp>
                           </elementProp>
-                          <elementProp name="" elementType="Header">
-                            <stringProp name="Header.name">Content-Type</stringProp>
-                            <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
-                          </elementProp>
                         </collectionProp>
                       </HeaderManager>
                       <hashTree/>
@@ -1825,10 +1822,6 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                             <stringProp name="Header.name">Authorization</stringProp>
                             <stringProp name="Header.value">bearer ${access_token}</stringProp>
                           </elementProp>
-                          <elementProp name="" elementType="Header">
-                            <stringProp name="Header.name">Content-Type</stringProp>
-                            <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
-                          </elementProp>
                         </collectionProp>
                       </HeaderManager>
                       <hashTree/>
@@ -1889,10 +1882,6 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                           <elementProp name="" elementType="Header">
                             <stringProp name="Header.name">Authorization</stringProp>
                             <stringProp name="Header.value">bearer ${access_token}</stringProp>
-                          </elementProp>
-                          <elementProp name="" elementType="Header">
-                            <stringProp name="Header.name">Content-Type</stringProp>
-                            <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
                           </elementProp>
                         </collectionProp>
                       </HeaderManager>
@@ -1970,10 +1959,6 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                             <stringProp name="Header.name">Authorization</stringProp>
                             <stringProp name="Header.value">bearer ${access_token}</stringProp>
                           </elementProp>
-                          <elementProp name="" elementType="Header">
-                            <stringProp name="Header.name">Content-Type</stringProp>
-                            <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
-                          </elementProp>
                         </collectionProp>
                       </HeaderManager>
                       <hashTree/>
@@ -2047,10 +2032,6 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                           <elementProp name="" elementType="Header">
                             <stringProp name="Header.name">Authorization</stringProp>
                             <stringProp name="Header.value">bearer ${access_token}</stringProp>
-                          </elementProp>
-                          <elementProp name="" elementType="Header">
-                            <stringProp name="Header.name">Content-Type</stringProp>
-                            <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
                           </elementProp>
                         </collectionProp>
                       </HeaderManager>
@@ -2135,10 +2116,6 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                             <stringProp name="Header.name">Authorization</stringProp>
                             <stringProp name="Header.value">bearer ${access_token}</stringProp>
                           </elementProp>
-                          <elementProp name="" elementType="Header">
-                            <stringProp name="Header.name">Content-Type</stringProp>
-                            <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
-                          </elementProp>
                         </collectionProp>
                       </HeaderManager>
                       <hashTree/>
@@ -2177,6 +2154,7 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                             <boolProp name="HTTPArgument.always_encode">false</boolProp>
                             <stringProp name="Argument.value">{&#xd;
 	&quot;storehouseAreaUuid&quot;: &quot;${storehouseAreaUuid}&quot;,&#xd;
+	&quot;goodsTypeList&quot;: [1],&#xd;
 	&quot;shelvesName&quot;: &quot;药品整货柜&quot;,&#xd;
 	&quot;shelvesCode&quot;: &quot;Y01&quot;,&#xd;
 	&quot;goodsAllocationNum&quot;: &quot;2&quot;,&#xd;
@@ -2227,10 +2205,6 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                             <stringProp name="Header.name">Authorization</stringProp>
                             <stringProp name="Header.value">bearer ${access_token}</stringProp>
                           </elementProp>
-                          <elementProp name="" elementType="Header">
-                            <stringProp name="Header.name">Content-Type</stringProp>
-                            <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
-                          </elementProp>
                         </collectionProp>
                       </HeaderManager>
                       <hashTree/>
@@ -2255,6 +2229,7 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                             <boolProp name="HTTPArgument.always_encode">false</boolProp>
                             <stringProp name="Argument.value">{&#xd;
 	&quot;storehouseAreaUuid&quot;: &quot;${storehouseAreaUuid2}&quot;,&#xd;
+	&quot;goodsTypeList&quot;: [1],&#xd;
 	&quot;shelvesName&quot;: &quot;药品散货柜&quot;,&#xd;
 	&quot;shelvesCode&quot;: &quot;Y02&quot;,&#xd;
 	&quot;goodsAllocationNum&quot;: &quot;2&quot;,&#xd;
@@ -2304,10 +2279,6 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                           <elementProp name="" elementType="Header">
                             <stringProp name="Header.name">Authorization</stringProp>
                             <stringProp name="Header.value">bearer ${access_token}</stringProp>
-                          </elementProp>
-                          <elementProp name="" elementType="Header">
-                            <stringProp name="Header.name">Content-Type</stringProp>
-                            <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
                           </elementProp>
                         </collectionProp>
                       </HeaderManager>
@@ -2679,6 +2650,142 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                       <stringProp name="variableNames">shelvesUuid</stringProp>
                     </JDBCSampler>
                     <hashTree/>
+                  </hashTree>
+                  <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="基础配置-新增柜组" enabled="true"/>
+                  <hashTree>
+                    <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/store-server/cabinetgroup 新增柜组" enabled="true">
+                      <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                      <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                        <collectionProp name="Arguments.arguments">
+                          <elementProp name="" elementType="HTTPArgument">
+                            <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                            <stringProp name="Argument.value">{&#xd;
+	&quot;cabinetGroupName&quot;: &quot;呼吸系统用药&quot;,&#xd;
+	&quot;activate&quot;: true&#xd;
+}</stringProp>
+                            <stringProp name="Argument.metadata">=</stringProp>
+                          </elementProp>
+                        </collectionProp>
+                      </elementProp>
+                      <stringProp name="HTTPSampler.domain"></stringProp>
+                      <stringProp name="HTTPSampler.port"></stringProp>
+                      <stringProp name="HTTPSampler.protocol"></stringProp>
+                      <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                      <stringProp name="HTTPSampler.path">/gateway/store-server/cabinetgroup</stringProp>
+                      <stringProp name="HTTPSampler.method">POST</stringProp>
+                      <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                      <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                      <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                      <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                      <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                      <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                      <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                    </HTTPSamplerProxy>
+                    <hashTree>
+                      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+                        <collectionProp name="HeaderManager.headers">
+                          <elementProp name="Accept-Language" elementType="Header">
+                            <stringProp name="Header.name">Accept-Language</stringProp>
+                            <stringProp name="Header.value">zh-CN,zh;q=0.9</stringProp>
+                          </elementProp>
+                          <elementProp name="Content-Type" elementType="Header">
+                            <stringProp name="Header.name">Content-Type</stringProp>
+                            <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+                          </elementProp>
+                          <elementProp name="Accept-Encoding" elementType="Header">
+                            <stringProp name="Header.name">Accept-Encoding</stringProp>
+                            <stringProp name="Header.value">gzip, deflate</stringProp>
+                          </elementProp>
+                          <elementProp name="Accept" elementType="Header">
+                            <stringProp name="Header.name">Accept</stringProp>
+                            <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                          </elementProp>
+                          <elementProp name="User-Agent" elementType="Header">
+                            <stringProp name="Header.name">User-Agent</stringProp>
+                            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36</stringProp>
+                          </elementProp>
+                          <elementProp name="" elementType="Header">
+                            <stringProp name="Header.name">Authorization</stringProp>
+                            <stringProp name="Header.value">bearer ${access_token}</stringProp>
+                          </elementProp>
+                        </collectionProp>
+                      </HeaderManager>
+                      <hashTree/>
+                      <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                        <collectionProp name="Asserion.test_strings">
+                          <stringProp name="67791721">&quot;code&quot;:0</stringProp>
+                          <stringProp name="-999492280">&quot;msg&quot;:&quot;成功&quot;</stringProp>
+                          <stringProp name="645908253">&quot;data&quot;:&quot;SUCCESS&quot;</stringProp>
+                        </collectionProp>
+                        <stringProp name="Assertion.custom_message"></stringProp>
+                        <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                        <boolProp name="Assertion.assume_success">false</boolProp>
+                        <intProp name="Assertion.test_type">16</intProp>
+                      </ResponseAssertion>
+                      <hashTree/>
+                    </hashTree>
+                    <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/store-server/cabinetgroup/list 获取柜组列表" enabled="true">
+                      <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                        <collectionProp name="Arguments.arguments"/>
+                      </elementProp>
+                      <stringProp name="HTTPSampler.domain"></stringProp>
+                      <stringProp name="HTTPSampler.port"></stringProp>
+                      <stringProp name="HTTPSampler.protocol"></stringProp>
+                      <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                      <stringProp name="HTTPSampler.path">/gateway/store-server/cabinetgroup/list</stringProp>
+                      <stringProp name="HTTPSampler.method">GET</stringProp>
+                      <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                      <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                      <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                      <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                      <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                      <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                      <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                    </HTTPSamplerProxy>
+                    <hashTree>
+                      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+                        <collectionProp name="HeaderManager.headers">
+                          <elementProp name="Accept-Language" elementType="Header">
+                            <stringProp name="Header.name">Accept-Language</stringProp>
+                            <stringProp name="Header.value">zh-CN,zh;q=0.9</stringProp>
+                          </elementProp>
+                          <elementProp name="Accept-Encoding" elementType="Header">
+                            <stringProp name="Header.name">Accept-Encoding</stringProp>
+                            <stringProp name="Header.value">gzip, deflate</stringProp>
+                          </elementProp>
+                          <elementProp name="Accept" elementType="Header">
+                            <stringProp name="Header.name">Accept</stringProp>
+                            <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                          </elementProp>
+                          <elementProp name="User-Agent" elementType="Header">
+                            <stringProp name="Header.name">User-Agent</stringProp>
+                            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36</stringProp>
+                          </elementProp>
+                          <elementProp name="" elementType="Header">
+                            <stringProp name="Header.name">Authorization</stringProp>
+                            <stringProp name="Header.value">bearer ${access_token}</stringProp>
+                          </elementProp>
+                        </collectionProp>
+                      </HeaderManager>
+                      <hashTree/>
+                      <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                        <collectionProp name="Asserion.test_strings">
+                          <stringProp name="67791721">&quot;code&quot;:0</stringProp>
+                          <stringProp name="-999492280">&quot;msg&quot;:&quot;成功&quot;</stringProp>
+                        </collectionProp>
+                        <stringProp name="Assertion.custom_message"></stringProp>
+                        <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                        <boolProp name="Assertion.assume_success">false</boolProp>
+                        <intProp name="Assertion.test_type">16</intProp>
+                      </ResponseAssertion>
+                      <hashTree/>
+                      <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="获取cabinetGroupUuid" enabled="true">
+                        <stringProp name="JSONPostProcessor.referenceNames">cabinetGroupUuid</stringProp>
+                        <stringProp name="JSONPostProcessor.jsonPathExprs">$.data[0].uuid</stringProp>
+                        <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                      </JSONPostProcessor>
+                      <hashTree/>
+                    </hashTree>
                   </hashTree>
                   <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="基础配置-设置审批流程(禁用)" enabled="true"/>
                   <hashTree>
@@ -3191,10 +3298,6 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                             <elementProp name="" elementType="Header">
                               <stringProp name="Header.name">Authorization</stringProp>
                               <stringProp name="Header.value">bearer ${access_token}</stringProp>
-                            </elementProp>
-                            <elementProp name="" elementType="Header">
-                              <stringProp name="Header.name">Content-Type</stringProp>
-                              <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
                             </elementProp>
                           </collectionProp>
                         </HeaderManager>
@@ -6785,6 +6888,11 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                           <elementProp name="" elementType="HTTPArgument">
                             <boolProp name="HTTPArgument.always_encode">false</boolProp>
                             <stringProp name="Argument.value">{&#xd;
+	&quot;realNameAuthentication&quot;: true,&#xd;
+	&quot;medicareDrugFlag&quot;: 0,&#xd;
+	&quot;doubleAcceptance&quot;: false,&#xd;
+	&quot;purchaseLimit&quot;: true,&#xd;
+	&quot;purchaseLimitNumber&quot;: 2,&#xd;
 	&quot;drugName&quot;: &quot;${getName}胶囊&quot;,&#xd;
 	&quot;sfdaNo&quot;: &quot;国药准字Z${approvalNumber}&quot;,&#xd;
 	&quot;size&quot;: &quot;100粒&quot;,&#xd;
@@ -6801,14 +6909,9 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
 	&quot;shelfLife&quot;: &quot;24&quot;,&#xd;
 	&quot;functionalIndicationCode&quot;: &quot;110004&quot;,&#xd;
 	&quot;barcode&quot;: &quot;${__time(,barcode)}&quot;,&#xd;
-	&quot;medicareDrugFlag&quot;: 1,&#xd;
 	&quot;mediumPackageNumber&quot;: 100,&#xd;
-	&quot;drugStoreGroupPriceVoList&quot;: [{&#xd;
-		&quot;price&quot;: &quot;9.99&quot;,&#xd;
-		&quot;storeGroupName&quot;: &quot;${getName}门店组&quot;,&#xd;
-		&quot;storeGroupUuid&quot;: &quot;${newstoregroup_uuid_1}&quot;&#xd;
-	}],&#xd;
-	&quot;purchasingCost&quot;: &quot;5.69&quot;,&#xd;
+	&quot;cabinetGroupUuid&quot;: &quot;${cabinetGroupUuid}&quot;,&#xd;
+	&quot;drugStoreGroupPriceVoList&quot;: [],&#xd;
 	&quot;productCategory&quot;: 1,&#xd;
 	&quot;uuid&quot;: &quot;&quot;&#xd;
 }</stringProp>
@@ -6857,9 +6960,141 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                             <stringProp name="Header.name">Authorization</stringProp>
                             <stringProp name="Header.value">bearer ${access_token}</stringProp>
                           </elementProp>
+                        </collectionProp>
+                      </HeaderManager>
+                      <hashTree/>
+                      <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                        <collectionProp name="Asserion.test_strings">
+                          <stringProp name="67791721">&quot;code&quot;:0</stringProp>
+                          <stringProp name="-999492280">&quot;msg&quot;:&quot;成功&quot;</stringProp>
+                        </collectionProp>
+                        <stringProp name="Assertion.custom_message"></stringProp>
+                        <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                        <boolProp name="Assertion.assume_success">false</boolProp>
+                        <intProp name="Assertion.test_type">16</intProp>
+                      </ResponseAssertion>
+                      <hashTree/>
+                    </hashTree>
+                    <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/store-server/drugList/price/add 获取门店组价格配置" enabled="true">
+                      <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                        <collectionProp name="Arguments.arguments"/>
+                      </elementProp>
+                      <stringProp name="HTTPSampler.domain"></stringProp>
+                      <stringProp name="HTTPSampler.port"></stringProp>
+                      <stringProp name="HTTPSampler.protocol"></stringProp>
+                      <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                      <stringProp name="HTTPSampler.path">/gateway/store-server/drugList/price/add</stringProp>
+                      <stringProp name="HTTPSampler.method">GET</stringProp>
+                      <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                      <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                      <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                      <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                      <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                      <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                      <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                    </HTTPSamplerProxy>
+                    <hashTree>
+                      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+                        <collectionProp name="HeaderManager.headers">
+                          <elementProp name="Accept-Language" elementType="Header">
+                            <stringProp name="Header.name">Accept-Language</stringProp>
+                            <stringProp name="Header.value">zh-CN,zh;q=0.9</stringProp>
+                          </elementProp>
+                          <elementProp name="Accept-Encoding" elementType="Header">
+                            <stringProp name="Header.name">Accept-Encoding</stringProp>
+                            <stringProp name="Header.value">gzip, deflate</stringProp>
+                          </elementProp>
+                          <elementProp name="Accept" elementType="Header">
+                            <stringProp name="Header.name">Accept</stringProp>
+                            <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                          </elementProp>
+                          <elementProp name="User-Agent" elementType="Header">
+                            <stringProp name="Header.name">User-Agent</stringProp>
+                            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36</stringProp>
+                          </elementProp>
                           <elementProp name="" elementType="Header">
+                            <stringProp name="Header.name">Authorization</stringProp>
+                            <stringProp name="Header.value">bearer ${access_token}</stringProp>
+                          </elementProp>
+                        </collectionProp>
+                      </HeaderManager>
+                      <hashTree/>
+                      <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                        <collectionProp name="Asserion.test_strings">
+                          <stringProp name="67791721">&quot;code&quot;:0</stringProp>
+                          <stringProp name="-999492280">&quot;msg&quot;:&quot;成功&quot;</stringProp>
+                        </collectionProp>
+                        <stringProp name="Assertion.custom_message"></stringProp>
+                        <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                        <boolProp name="Assertion.assume_success">false</boolProp>
+                        <intProp name="Assertion.test_type">16</intProp>
+                      </ResponseAssertion>
+                      <hashTree/>
+                    </hashTree>
+                    <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/store-server/drugList/price 添加价格配置" enabled="true">
+                      <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                      <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                        <collectionProp name="Arguments.arguments">
+                          <elementProp name="" elementType="HTTPArgument">
+                            <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                            <stringProp name="Argument.value">{&#xd;
+	&quot;uuid&quot;: &quot;add&quot;,&#xd;
+	&quot;drugStoreGroupPriceVoList&quot;: [{&#xd;
+		&quot;storeGroupUuid&quot;: &quot;${newstoregroup_uuid_1}&quot;,&#xd;
+		&quot;price&quot;: &quot;9.99&quot;,&#xd;
+		&quot;storeGroupName&quot;: &quot;${getName}门店组&quot;&#xd;
+	}],&#xd;
+	&quot;purchasePriceIncreaseVoList&quot;: [{&#xd;
+		&quot;storeGroupUuid&quot;: &quot;${newstoregroup_uuid_1}&quot;,&#xd;
+		&quot;storeGroupName&quot;: &quot;${getName}门店组&quot;,&#xd;
+		&quot;increaseType&quot;: 2,&#xd;
+		&quot;increaseValue&quot;: &quot;5.69&quot;&#xd;
+	}]&#xd;
+}</stringProp>
+                            <stringProp name="Argument.metadata">=</stringProp>
+                          </elementProp>
+                        </collectionProp>
+                      </elementProp>
+                      <stringProp name="HTTPSampler.domain"></stringProp>
+                      <stringProp name="HTTPSampler.port"></stringProp>
+                      <stringProp name="HTTPSampler.protocol"></stringProp>
+                      <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                      <stringProp name="HTTPSampler.path">/gateway/store-server/drugList/price</stringProp>
+                      <stringProp name="HTTPSampler.method">POST</stringProp>
+                      <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                      <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                      <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                      <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                      <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                      <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                      <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                    </HTTPSamplerProxy>
+                    <hashTree>
+                      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+                        <collectionProp name="HeaderManager.headers">
+                          <elementProp name="Accept-Language" elementType="Header">
+                            <stringProp name="Header.name">Accept-Language</stringProp>
+                            <stringProp name="Header.value">zh-CN,zh;q=0.9</stringProp>
+                          </elementProp>
+                          <elementProp name="Content-Type" elementType="Header">
                             <stringProp name="Header.name">Content-Type</stringProp>
                             <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+                          </elementProp>
+                          <elementProp name="Accept-Encoding" elementType="Header">
+                            <stringProp name="Header.name">Accept-Encoding</stringProp>
+                            <stringProp name="Header.value">gzip, deflate</stringProp>
+                          </elementProp>
+                          <elementProp name="Accept" elementType="Header">
+                            <stringProp name="Header.name">Accept</stringProp>
+                            <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                          </elementProp>
+                          <elementProp name="User-Agent" elementType="Header">
+                            <stringProp name="Header.name">User-Agent</stringProp>
+                            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36</stringProp>
+                          </elementProp>
+                          <elementProp name="" elementType="Header">
+                            <stringProp name="Header.name">Authorization</stringProp>
+                            <stringProp name="Header.value">bearer ${access_token}</stringProp>
                           </elementProp>
                         </collectionProp>
                       </HeaderManager>
@@ -7019,6 +7254,7 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
 		&quot;manufacturer&quot;: &quot;${getName2}制药股份有限公司&quot;,&#xd;
 		&quot;number&quot;: &quot;1000&quot;&#xd;
 	}],&#xd;
+	&quot;productCategory&quot;: 1,&#xd;
 	&quot;uuid&quot;: &quot;&quot;&#xd;
 }</stringProp>
                               <stringProp name="Argument.metadata">=</stringProp>
@@ -7088,7 +7324,7 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                     </hashTree>
                     <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="采购管理-采购计划提交审核" enabled="true"/>
                     <hashTree>
-                      <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/store-server/purchase/plan/list 查看采购计划列表" enabled="true">
+                      <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/store-server/purchase/plan/list 查看采购计划列表(带查询条件)" enabled="true">
                         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                           <collectionProp name="Arguments.arguments">
                             <elementProp name="page.currentPage" elementType="HTTPArgument">
@@ -7115,6 +7351,109 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                             <elementProp name="supplierName" elementType="HTTPArgument">
                               <boolProp name="HTTPArgument.always_encode">true</boolProp>
                               <stringProp name="Argument.value">${getName2}制药股份有限公司</stringProp>
+                              <stringProp name="Argument.metadata">=</stringProp>
+                              <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                              <stringProp name="Argument.name">supplierName</stringProp>
+                            </elementProp>
+                            <elementProp name="startTime" elementType="HTTPArgument">
+                              <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                              <stringProp name="Argument.value"></stringProp>
+                              <stringProp name="Argument.metadata">=</stringProp>
+                              <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                              <stringProp name="Argument.name">startTime</stringProp>
+                            </elementProp>
+                            <elementProp name="endTime" elementType="HTTPArgument">
+                              <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                              <stringProp name="Argument.value"></stringProp>
+                              <stringProp name="Argument.metadata">=</stringProp>
+                              <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                              <stringProp name="Argument.name">endTime</stringProp>
+                            </elementProp>
+                          </collectionProp>
+                        </elementProp>
+                        <stringProp name="HTTPSampler.domain"></stringProp>
+                        <stringProp name="HTTPSampler.port"></stringProp>
+                        <stringProp name="HTTPSampler.protocol"></stringProp>
+                        <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+                        <stringProp name="HTTPSampler.path">/gateway/store-server/purchase/plan/list</stringProp>
+                        <stringProp name="HTTPSampler.method">GET</stringProp>
+                        <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                        <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                        <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                        <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                        <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                      </HTTPSamplerProxy>
+                      <hashTree>
+                        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+                          <collectionProp name="HeaderManager.headers">
+                            <elementProp name="Accept-Language" elementType="Header">
+                              <stringProp name="Header.name">Accept-Language</stringProp>
+                              <stringProp name="Header.value">zh-CN,zh;q=0.9</stringProp>
+                            </elementProp>
+                            <elementProp name="Content-Type" elementType="Header">
+                              <stringProp name="Header.name">Content-Type</stringProp>
+                              <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+                            </elementProp>
+                            <elementProp name="Accept-Encoding" elementType="Header">
+                              <stringProp name="Header.name">Accept-Encoding</stringProp>
+                              <stringProp name="Header.value">gzip, deflate</stringProp>
+                            </elementProp>
+                            <elementProp name="Accept" elementType="Header">
+                              <stringProp name="Header.name">Accept</stringProp>
+                              <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                            </elementProp>
+                            <elementProp name="User-Agent" elementType="Header">
+                              <stringProp name="Header.name">User-Agent</stringProp>
+                              <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36</stringProp>
+                            </elementProp>
+                            <elementProp name="" elementType="Header">
+                              <stringProp name="Header.name">Authorization</stringProp>
+                              <stringProp name="Header.value">bearer ${access_token}</stringProp>
+                            </elementProp>
+                          </collectionProp>
+                        </HeaderManager>
+                        <hashTree/>
+                        <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                          <collectionProp name="Asserion.test_strings">
+                            <stringProp name="67791721">&quot;code&quot;:0</stringProp>
+                            <stringProp name="-999492280">&quot;msg&quot;:&quot;成功&quot;</stringProp>
+                          </collectionProp>
+                          <stringProp name="Assertion.custom_message"></stringProp>
+                          <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                          <boolProp name="Assertion.assume_success">false</boolProp>
+                          <intProp name="Assertion.test_type">16</intProp>
+                        </ResponseAssertion>
+                        <hashTree/>
+                      </hashTree>
+                      <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/store-server/purchase/plan/list 查看采购计划列表" enabled="true">
+                        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                          <collectionProp name="Arguments.arguments">
+                            <elementProp name="page.currentPage" elementType="HTTPArgument">
+                              <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                              <stringProp name="Argument.value">1</stringProp>
+                              <stringProp name="Argument.metadata">=</stringProp>
+                              <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                              <stringProp name="Argument.name">page.currentPage</stringProp>
+                            </elementProp>
+                            <elementProp name="page.pageSize" elementType="HTTPArgument">
+                              <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                              <stringProp name="Argument.value">10</stringProp>
+                              <stringProp name="Argument.metadata">=</stringProp>
+                              <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                              <stringProp name="Argument.name">page.pageSize</stringProp>
+                            </elementProp>
+                            <elementProp name="applyPlanNo" elementType="HTTPArgument">
+                              <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                              <stringProp name="Argument.value"></stringProp>
+                              <stringProp name="Argument.metadata">=</stringProp>
+                              <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                              <stringProp name="Argument.name">applyPlanNo</stringProp>
+                            </elementProp>
+                            <elementProp name="supplierName" elementType="HTTPArgument">
+                              <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                              <stringProp name="Argument.value"></stringProp>
                               <stringProp name="Argument.metadata">=</stringProp>
                               <boolProp name="HTTPArgument.use_equals">true</boolProp>
                               <stringProp name="Argument.name">supplierName</stringProp>
@@ -7264,7 +7603,7 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                   <hashTree>
                     <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="采购管理-采购单列表" enabled="true"/>
                     <hashTree>
-                      <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/store-server/purchase/order/list 查看采购单列表" enabled="true">
+                      <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/store-server/purchase/order/list 查看采购单列表(带查询条件)" enabled="true">
                         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
                           <collectionProp name="Arguments.arguments">
                             <elementProp name="page.currentPage" elementType="HTTPArgument">
@@ -7291,6 +7630,123 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                             <elementProp name="supplierName" elementType="HTTPArgument">
                               <boolProp name="HTTPArgument.always_encode">true</boolProp>
                               <stringProp name="Argument.value">${getName2}制药股份有限公司</stringProp>
+                              <stringProp name="Argument.metadata">=</stringProp>
+                              <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                              <stringProp name="Argument.name">supplierName</stringProp>
+                            </elementProp>
+                            <elementProp name="operatorStartTime" elementType="HTTPArgument">
+                              <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                              <stringProp name="Argument.value"></stringProp>
+                              <stringProp name="Argument.metadata">=</stringProp>
+                              <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                              <stringProp name="Argument.name">operatorStartTime</stringProp>
+                            </elementProp>
+                            <elementProp name="operatorEndTime" elementType="HTTPArgument">
+                              <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                              <stringProp name="Argument.value"></stringProp>
+                              <stringProp name="Argument.metadata">=</stringProp>
+                              <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                              <stringProp name="Argument.name">operatorEndTime</stringProp>
+                            </elementProp>
+                            <elementProp name="startTime" elementType="HTTPArgument">
+                              <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                              <stringProp name="Argument.value"></stringProp>
+                              <stringProp name="Argument.metadata">=</stringProp>
+                              <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                              <stringProp name="Argument.name">startTime</stringProp>
+                            </elementProp>
+                            <elementProp name="endTime" elementType="HTTPArgument">
+                              <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                              <stringProp name="Argument.value"></stringProp>
+                              <stringProp name="Argument.metadata">=</stringProp>
+                              <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                              <stringProp name="Argument.name">endTime</stringProp>
+                            </elementProp>
+                          </collectionProp>
+                        </elementProp>
+                        <stringProp name="HTTPSampler.domain"></stringProp>
+                        <stringProp name="HTTPSampler.port"></stringProp>
+                        <stringProp name="HTTPSampler.protocol"></stringProp>
+                        <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+                        <stringProp name="HTTPSampler.path">/gateway/store-server/purchase/order/list</stringProp>
+                        <stringProp name="HTTPSampler.method">GET</stringProp>
+                        <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                        <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                        <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                        <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                        <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                      </HTTPSamplerProxy>
+                      <hashTree>
+                        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+                          <collectionProp name="HeaderManager.headers">
+                            <elementProp name="Accept-Language" elementType="Header">
+                              <stringProp name="Header.name">Accept-Language</stringProp>
+                              <stringProp name="Header.value">zh-CN,zh;q=0.9</stringProp>
+                            </elementProp>
+                            <elementProp name="Content-Type" elementType="Header">
+                              <stringProp name="Header.name">Content-Type</stringProp>
+                              <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
+                            </elementProp>
+                            <elementProp name="Accept-Encoding" elementType="Header">
+                              <stringProp name="Header.name">Accept-Encoding</stringProp>
+                              <stringProp name="Header.value">gzip, deflate</stringProp>
+                            </elementProp>
+                            <elementProp name="Accept" elementType="Header">
+                              <stringProp name="Header.name">Accept</stringProp>
+                              <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                            </elementProp>
+                            <elementProp name="User-Agent" elementType="Header">
+                              <stringProp name="Header.name">User-Agent</stringProp>
+                              <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36</stringProp>
+                            </elementProp>
+                            <elementProp name="" elementType="Header">
+                              <stringProp name="Header.name">Authorization</stringProp>
+                              <stringProp name="Header.value">bearer ${access_token}</stringProp>
+                            </elementProp>
+                          </collectionProp>
+                        </HeaderManager>
+                        <hashTree/>
+                        <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+                          <collectionProp name="Asserion.test_strings">
+                            <stringProp name="67791721">&quot;code&quot;:0</stringProp>
+                            <stringProp name="-999492280">&quot;msg&quot;:&quot;成功&quot;</stringProp>
+                          </collectionProp>
+                          <stringProp name="Assertion.custom_message"></stringProp>
+                          <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+                          <boolProp name="Assertion.assume_success">false</boolProp>
+                          <intProp name="Assertion.test_type">16</intProp>
+                        </ResponseAssertion>
+                        <hashTree/>
+                      </hashTree>
+                      <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/store-server/purchase/order/list 查看采购单列表" enabled="true">
+                        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                          <collectionProp name="Arguments.arguments">
+                            <elementProp name="page.currentPage" elementType="HTTPArgument">
+                              <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                              <stringProp name="Argument.value">1</stringProp>
+                              <stringProp name="Argument.metadata">=</stringProp>
+                              <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                              <stringProp name="Argument.name">page.currentPage</stringProp>
+                            </elementProp>
+                            <elementProp name="page.pageSize" elementType="HTTPArgument">
+                              <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                              <stringProp name="Argument.value">10</stringProp>
+                              <stringProp name="Argument.metadata">=</stringProp>
+                              <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                              <stringProp name="Argument.name">page.pageSize</stringProp>
+                            </elementProp>
+                            <elementProp name="applyNo" elementType="HTTPArgument">
+                              <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                              <stringProp name="Argument.value"></stringProp>
+                              <stringProp name="Argument.metadata">=</stringProp>
+                              <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                              <stringProp name="Argument.name">applyNo</stringProp>
+                            </elementProp>
+                            <elementProp name="supplierName" elementType="HTTPArgument">
+                              <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                              <stringProp name="Argument.value"></stringProp>
                               <stringProp name="Argument.metadata">=</stringProp>
                               <boolProp name="HTTPArgument.use_equals">true</boolProp>
                               <stringProp name="Argument.name">supplierName</stringProp>
@@ -7480,7 +7936,8 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
 		&quot;productNo&quot;: &quot;${product_no_1}&quot;,&#xd;
 		&quot;uuid&quot;: &quot;${products_uuid}&quot;,&#xd;
 		&quot;dosageForm&quot;: &quot;颗粒剂&quot;,&#xd;
-		&quot;sfdaNo&quot;: &quot;国药准字Z${approvalNumber}&quot;&#xd;
+		&quot;sfdaNo&quot;: &quot;国药准字Z${approvalNumber}&quot;,&#xd;
+		&quot;productType&quot;: &quot;&quot;&#xd;
 	}],&#xd;
 	&quot;uuid&quot;: &quot;${applyPlanNo_uuid}&quot;&#xd;
 }</stringProp>
@@ -7550,7 +8007,7 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                       </hashTree>
                     </hashTree>
                   </hashTree>
-                  <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="基础配置-设置审批流程(恢复启用)" enabled="true"/>
+                  <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="基础配置-设置审批流程(恢复启用)" enabled="false"/>
                   <hashTree>
                     <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/store-server/storeAuditCase/changeActivate 设置首营资料审核流程启用" enabled="true">
                       <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -8504,10 +8961,12 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                           <elementProp name="" elementType="HTTPArgument">
                             <boolProp name="HTTPArgument.always_encode">false</boolProp>
                             <stringProp name="Argument.value">{&#xd;
-	&quot;workAt&quot;: 0,&#xd;
+	&quot;workAt&quot;: 1,&#xd;
+	&quot;pharmacist&quot;: true,&#xd;
 	&quot;account&quot;: &quot;${account2}&quot;,&#xd;
 	&quot;employName&quot;: &quot;蒋忠国&quot;,&#xd;
 	&quot;employPhone&quot;: &quot;${getTelPhone2}&quot;,&#xd;
+	&quot;sex&quot;: 1,&#xd;
 	&quot;idCard&quot;: &quot;&quot;,&#xd;
 	&quot;roleList&quot;: [&quot;${roleCode}&quot;],&#xd;
 	&quot;password&quot;: &quot;123456&quot;,&#xd;
@@ -8579,7 +9038,7 @@ vars.put(&quot;getDayNextYear&quot;,getDayNextYear);</stringProp>
                     </hashTree>
                   </hashTree>
                 </hashTree>
-                <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="药仓端小程序-出入库业务" enabled="true"/>
+                <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="药仓端小程序-出入库业务" enabled="false"/>
                 <hashTree>
                   <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="药仓端-登录" enabled="true"/>
                   <hashTree>
