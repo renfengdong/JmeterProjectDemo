@@ -634,7 +634,7 @@ vars.put(&quot;getCard&quot;,getCard);</stringProp>
           <stringProp name="connectionAge">5000</stringProp>
           <stringProp name="connectionProperties"></stringProp>
           <stringProp name="dataSource">mysql_medicine_store</stringProp>
-          <stringProp name="dbUrl">jdbc:mysql://60.190.46.107:30206/medicine_store?serverTimezone=UTC&amp;characterEncoding=utf-8</stringProp>
+          <stringProp name="dbUrl">jdbc:mysql://199.16.1.102:3306/medicine_store?serverTimezone=UTC&amp;characterEncoding=utf-8</stringProp>
           <stringProp name="driver">com.mysql.cj.jdbc.Driver</stringProp>
           <stringProp name="initQuery"></stringProp>
           <boolProp name="keepAlive">true</boolProp>
