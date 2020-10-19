@@ -1,2 +1,0 @@
-username,password
-sunday,123456

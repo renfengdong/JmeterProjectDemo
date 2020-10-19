@@ -1,2 +1,0 @@
-协议,服务器IP,端口
-http,91medicine.net,30180
