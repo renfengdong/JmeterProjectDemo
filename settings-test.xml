@@ -195,23 +195,9 @@ under the License.
         </profile>
 
         <profile>
-            <id>APITest_BP_storeserver(QA)_flow</id>
+            <id>TestAPI_System</id>
             <properties>
-                <jmeter.fileName>APITest_BP_storeserver(QA)_flow</jmeter.fileName>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>APITest_BP_systemserver</id>
-            <properties>
-                <jmeter.fileName>APITest_BP_systemserver</jmeter.fileName>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>APITest_doctorserver</id>
-            <properties>
-                <jmeter.fileName>APITest_doctorserver</jmeter.fileName>
+                <jmeter.fileName>TestAPI_System</jmeter.fileName>
             </properties>
         </profile>
 
