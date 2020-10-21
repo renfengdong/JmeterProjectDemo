@@ -426,7 +426,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="大后天-券管理(单接口测试)" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="大后天-券管理(单接口测试)" enabled="true"/>
         <hashTree>
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="券管理-列表功能（单接口）" enabled="true"/>
           <hashTree>
@@ -3426,78 +3426,6 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               </ResponseAssertion>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/manage/coupon 编辑优惠券（券名称特殊字符）" enabled="false">
-              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-                <collectionProp name="Arguments.arguments">
-                  <elementProp name="" elementType="HTTPArgument">
-                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                    <stringProp name="Argument.value">{&#xd;
-	&quot;id&quot;: &quot;${couponId}&quot;,&#xd;
-	&quot;couponType&quot;: 2,&#xd;
-	&quot;couponNo&quot;: &quot;${couponNo}&quot;,&#xd;
-	&quot;couponName&quot;: &quot;~!@#$%^&amp;*()_+&lt;&gt;:”{}|&quot;,&#xd;
-	&quot;usageRule&quot;: 2,&#xd;
-	&quot;couponCode&quot;: &quot;&quot;,&#xd;
-	&quot;couponScope&quot;: 2,&#xd;
-	&quot;spendingLimit&quot;: &quot;1000&quot;,&#xd;
-	&quot;discounts&quot;: 5,&#xd;
-	&quot;obtainLimit&quot;: 99999,&#xd;
-	&quot;totalQuantity&quot;: 0,&#xd;
-	&quot;obtainTimeStart&quot;: &quot;&quot;,&#xd;
-	&quot;obtainTimeEnd&quot;: &quot;&quot;,&#xd;
-	&quot;effectiveTimeStart&quot;: &quot;${__time(yyyy-MM-dd,)}&quot;,&#xd;
-	&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;,&#xd;
-	&quot;fileUrl&quot;: &quot;https://img1.usexcx.com/20201014135726114659.jpg&quot;,&#xd;
-	&quot;descr&quot;: &quot;测试优惠券&quot;,&#xd;
-	&quot;companyList&quot;: [{&#xd;
-		&quot;id&quot;: 40,&#xd;
-		&quot;name&quot;: &quot;一鸣真香奶吧（世纪花园店）&quot;&#xd;
-	}]&#xd;
-}</stringProp>
-                    <stringProp name="Argument.metadata">=</stringProp>
-                  </elementProp>
-                </collectionProp>
-              </elementProp>
-              <stringProp name="HTTPSampler.domain"></stringProp>
-              <stringProp name="HTTPSampler.port"></stringProp>
-              <stringProp name="HTTPSampler.protocol"></stringProp>
-              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-              <stringProp name="HTTPSampler.path">/manage/coupon</stringProp>
-              <stringProp name="HTTPSampler.method">PUT</stringProp>
-              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-              <stringProp name="HTTPSampler.response_timeout"></stringProp>
-            </HTTPSamplerProxy>
-            <hashTree>
-              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
-                <collectionProp name="HeaderManager.headers">
-                  <elementProp name="" elementType="Header">
-                    <stringProp name="Header.name">Authorization</stringProp>
-                    <stringProp name="Header.value">bearer ${access_token}</stringProp>
-                  </elementProp>
-                  <elementProp name="" elementType="Header">
-                    <stringProp name="Header.name">content-type</stringProp>
-                    <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
-                  </elementProp>
-                </collectionProp>
-              </HeaderManager>
-              <hashTree/>
-              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
-                <collectionProp name="Asserion.test_strings">
-                  <stringProp name="723337899">&quot;code&quot;:200</stringProp>
-                </collectionProp>
-                <stringProp name="Assertion.custom_message"></stringProp>
-                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-                <boolProp name="Assertion.assume_success">false</boolProp>
-                <intProp name="Assertion.test_type">16</intProp>
-              </ResponseAssertion>
-              <hashTree/>
-            </hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/manage/coupon 编辑优惠券（券名称超长字符）" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -4228,7 +4156,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
             </hashTree>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="大后台-会员管理(单接口测试)" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="大后台-会员管理(单接口测试)" enabled="true"/>
         <hashTree>
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="会员管理-列表功能(单接口)" enabled="true"/>
           <hashTree>
@@ -5126,7 +5054,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="大后台-商户管理(单接口测试)" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="大后台-商户管理(单接口测试)" enabled="true"/>
         <hashTree>
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="商户管理-列表功能(单接口)" enabled="true"/>
           <hashTree>
@@ -7494,7 +7422,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
             </hashTree>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="大后台-广告管理(单接口测试)" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="大后台-广告管理(单接口测试)" enabled="true"/>
         <hashTree>
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="广告管理-列表功能(单接口)" enabled="true"/>
           <hashTree>
@@ -8767,7 +8695,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
             </hashTree>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="大后台-活动管理(单接口测试)" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="大后台-活动管理(单接口测试)" enabled="true"/>
         <hashTree>
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="活动管理-券推广活动列表功能(单接口)" enabled="true"/>
           <hashTree>
@@ -10347,6 +10275,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-222482771">&quot;msg&quot;:&quot;时间段格式错误&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -10431,6 +10360,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-918880507">&quot;msg&quot;:&quot;活动规则不能为空&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -10515,6 +10445,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-918880507">&quot;msg&quot;:&quot;活动规则不能为空&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -10535,7 +10466,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
 	&quot;backgroundType&quot;: 2,&#xd;
 	&quot;displayStartTime&quot;: &quot;${__time(yyyy-MM-dd,)} 00:00:01&quot;,&#xd;
 	&quot;displayEndTime&quot;: &quot;${getNextMonth} 23:59:59&quot;,&#xd;
-	&quot;activityRule&quot;: &quot;我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符&quot;,&#xd;
+	&quot;activityRule&quot;: &quot;我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符我是超长字符&quot;,&#xd;
 	&quot;homePageFileUuid&quot;: 1602835793326,&#xd;
 	&quot;homePageFileUrl&quot;: &quot;https://img1.usexcx.com/20201016160953475351.jpg&quot;,&#xd;
 	&quot;activityPageFileUuid&quot;: 1602835797091,&#xd;
@@ -10599,6 +10530,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-923054604">&quot;msg&quot;:&quot;活动规则超过字数限制&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -10683,6 +10615,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-800323389">&quot;msg&quot;:&quot;首页展示图不能为空&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -10767,6 +10700,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-337399221">&quot;msg&quot;:&quot;活动页头图不能为空&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -10851,6 +10785,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="725431810">&quot;msg&quot;:&quot;背景图不能为空&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -10935,6 +10870,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="762067652">&quot;msg&quot;:&quot;分享图不能为空&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -11019,6 +10955,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="580961361">&quot;msg&quot;:&quot;分享标题不能为空&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -11103,6 +11040,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="580961361">&quot;msg&quot;:&quot;分享标题不能为空&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -11187,6 +11125,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="1610936384">&quot;msg&quot;:&quot;分享标题超过字数限制&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -11554,7 +11493,8 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <hashTree/>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
-                  <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+                  <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="1673814990">时间不能为空</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -11627,7 +11567,8 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <hashTree/>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
-                  <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+                  <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="1673814990">时间不能为空</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -11700,7 +11641,8 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <hashTree/>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
-                  <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+                  <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-1482732655">&quot;msg&quot;:&quot;活动开始时间不能为空&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -11773,7 +11715,8 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <hashTree/>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
-                  <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+                  <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-1561514928">&quot;msg&quot;:&quot;活动结束时间不能为空&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -11847,6 +11790,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-222482771">&quot;msg&quot;:&quot;时间段格式错误&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -11920,6 +11864,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-612710973">&quot;msg&quot;:&quot;总数量不能为空&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -11993,6 +11938,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-612710973">&quot;msg&quot;:&quot;总数量不能为空&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -12212,6 +12158,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-1571171198">&quot;msg&quot;:&quot;限制数量不能为空&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -12285,6 +12232,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-1571171198">&quot;msg&quot;:&quot;限制数量不能为空&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -14098,7 +14046,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
           </hashTree>
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="活动管理-开票送券新增功能(单接口)" enabled="true"/>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增券推广活动（正常保存）" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增开票送券（正常保存）" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -14121,7 +14069,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
 			&quot;usageRule&quot;: 2,&#xd;
 			&quot;effectiveDay&quot;: 0,&#xd;
 			&quot;effectiveTimeStart&quot;: &quot;${__time(yyyy-MM-dd,)}&quot;,&#xd;
-			&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;,&#xd;
+			&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;&#xd;
 		}]&#xd;
 	}]&#xd;
 }</stringProp>
@@ -14168,7 +14116,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               </ResponseAssertion>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增券推广活动（方案名称为空）" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增开票送券（方案名称为空）" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -14191,7 +14139,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
 			&quot;usageRule&quot;: 2,&#xd;
 			&quot;effectiveDay&quot;: 0,&#xd;
 			&quot;effectiveTimeStart&quot;: &quot;${__time(yyyy-MM-dd,)}&quot;,&#xd;
-			&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;,&#xd;
+			&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;&#xd;
 		}]&#xd;
 	}]&#xd;
 }</stringProp>
@@ -14229,7 +14177,8 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <hashTree/>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
-                  <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+                  <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-1778256956">&quot;msg&quot;:&quot;名称不能为空&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -14238,7 +14187,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               </ResponseAssertion>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增券推广活动（方案名称为null）" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增开票送券（方案名称为null）" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -14261,7 +14210,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
 			&quot;usageRule&quot;: 2,&#xd;
 			&quot;effectiveDay&quot;: 0,&#xd;
 			&quot;effectiveTimeStart&quot;: &quot;${__time(yyyy-MM-dd,)}&quot;,&#xd;
-			&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;,&#xd;
+			&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;&#xd;
 		}]&#xd;
 	}]&#xd;
 }</stringProp>
@@ -14299,7 +14248,8 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <hashTree/>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
-                  <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+                  <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-1778256956">&quot;msg&quot;:&quot;名称不能为空&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -14308,7 +14258,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               </ResponseAssertion>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增券推广活动（方案名称超长字符）" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增开票送券（方案名称超长字符）" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -14331,7 +14281,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
 			&quot;usageRule&quot;: 2,&#xd;
 			&quot;effectiveDay&quot;: 0,&#xd;
 			&quot;effectiveTimeStart&quot;: &quot;${__time(yyyy-MM-dd,)}&quot;,&#xd;
-			&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;,&#xd;
+			&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;&#xd;
 		}]&#xd;
 	}]&#xd;
 }</stringProp>
@@ -14369,7 +14319,8 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <hashTree/>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
-                  <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+                  <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-79422540">&quot;msg&quot;:&quot;活动名称字符数超过限制&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -14378,7 +14329,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               </ResponseAssertion>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增券推广活动（活动时间为空）" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增开票送券（活动时间为空）" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -14401,7 +14352,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
 			&quot;usageRule&quot;: 2,&#xd;
 			&quot;effectiveDay&quot;: 0,&#xd;
 			&quot;effectiveTimeStart&quot;: &quot;${__time(yyyy-MM-dd,)}&quot;,&#xd;
-			&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;,&#xd;
+			&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;&#xd;
 		}]&#xd;
 	}]&#xd;
 }</stringProp>
@@ -14439,7 +14390,8 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <hashTree/>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
-                  <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+                  <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="1673814990">时间不能为空</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -14448,7 +14400,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               </ResponseAssertion>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增券推广活动（活动时间为null）" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增开票送券（活动时间为null）" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -14471,7 +14423,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
 			&quot;usageRule&quot;: 2,&#xd;
 			&quot;effectiveDay&quot;: 0,&#xd;
 			&quot;effectiveTimeStart&quot;: &quot;${__time(yyyy-MM-dd,)}&quot;,&#xd;
-			&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;,&#xd;
+			&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;&#xd;
 		}]&#xd;
 	}]&#xd;
 }</stringProp>
@@ -14509,7 +14461,8 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <hashTree/>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
-                  <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+                  <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="1673814990">时间不能为空</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -14518,7 +14471,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               </ResponseAssertion>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增券推广活动（活动时间开始时间为空）" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增开票送券（活动时间开始时间为空）" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -14541,7 +14494,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
 			&quot;usageRule&quot;: 2,&#xd;
 			&quot;effectiveDay&quot;: 0,&#xd;
 			&quot;effectiveTimeStart&quot;: &quot;${__time(yyyy-MM-dd,)}&quot;,&#xd;
-			&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;,&#xd;
+			&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;&#xd;
 		}]&#xd;
 	}]&#xd;
 }</stringProp>
@@ -14579,7 +14532,8 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <hashTree/>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
-                  <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+                  <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-1482732655">&quot;msg&quot;:&quot;活动开始时间不能为空&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -14588,7 +14542,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               </ResponseAssertion>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增券推广活动（活动时间结束时间为空）" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增开票送券（活动时间结束时间为空）" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -14611,7 +14565,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
 			&quot;usageRule&quot;: 2,&#xd;
 			&quot;effectiveDay&quot;: 0,&#xd;
 			&quot;effectiveTimeStart&quot;: &quot;${__time(yyyy-MM-dd,)}&quot;,&#xd;
-			&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;,&#xd;
+			&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;&#xd;
 		}]&#xd;
 	}]&#xd;
 }</stringProp>
@@ -14649,7 +14603,8 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <hashTree/>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
-                  <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+                  <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-1561514928">&quot;msg&quot;:&quot;活动结束时间不能为空&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -14658,7 +14613,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               </ResponseAssertion>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增券推广活动（活动时间开始时间大于结束时间）" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增开票送券（活动时间开始时间大于结束时间）" enabled="true">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
               <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
                 <collectionProp name="Arguments.arguments">
@@ -14681,7 +14636,7 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
 			&quot;usageRule&quot;: 2,&#xd;
 			&quot;effectiveDay&quot;: 0,&#xd;
 			&quot;effectiveTimeStart&quot;: &quot;${__time(yyyy-MM-dd,)}&quot;,&#xd;
-			&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;,&#xd;
+			&quot;effectiveTimeEnd&quot;: &quot;${getNextMonth}&quot;&#xd;
 		}]&#xd;
 	}]&#xd;
 }</stringProp>
@@ -14719,66 +14674,8 @@ vars.put(&quot;getNextMonth&quot;,getNextMonth);</stringProp>
               <hashTree/>
               <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
-                  <stringProp name="723337899">&quot;code&quot;:200</stringProp>
-                </collectionProp>
-                <stringProp name="Assertion.custom_message"></stringProp>
-                <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-                <boolProp name="Assertion.assume_success">false</boolProp>
-                <intProp name="Assertion.test_type">16</intProp>
-              </ResponseAssertion>
-              <hashTree/>
-            </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/activity/manage 新增券推广活动（不添加优惠券）" enabled="true">
-              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-                <collectionProp name="Arguments.arguments">
-                  <elementProp name="" elementType="HTTPArgument">
-                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                    <stringProp name="Argument.value">{&#xd;
-	&quot;name&quot;: &quot;开票送券${__time(ddHHmmss,)}&quot;,&#xd;
-	&quot;activityType&quot;: 3,&#xd;
-	&quot;displayStartTime&quot;: &quot;${__time(yyyy-MM-dd,)} 00:00:01&quot;,&#xd;
-	&quot;displayEndTime&quot;: &quot;${getNextMonth} 23:59:59&quot;,&#xd;
-	&quot;roundList&quot;: [{&#xd;
-		&quot;activityStartTime&quot;: &quot;${__time(yyyy-MM-dd,)} 00:00:01&quot;,&#xd;
-		&quot;activityEndTime&quot;: &quot;${getNextMonth} 23:59:59&quot;&#xd;
-	}]&#xd;
-}</stringProp>
-                    <stringProp name="Argument.metadata">=</stringProp>
-                  </elementProp>
-                </collectionProp>
-              </elementProp>
-              <stringProp name="HTTPSampler.domain"></stringProp>
-              <stringProp name="HTTPSampler.port"></stringProp>
-              <stringProp name="HTTPSampler.protocol"></stringProp>
-              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-              <stringProp name="HTTPSampler.path">/manage/activity/manage</stringProp>
-              <stringProp name="HTTPSampler.method">POST</stringProp>
-              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-              <stringProp name="HTTPSampler.response_timeout"></stringProp>
-            </HTTPSamplerProxy>
-            <hashTree>
-              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
-                <collectionProp name="HeaderManager.headers">
-                  <elementProp name="" elementType="Header">
-                    <stringProp name="Header.name">Authorization</stringProp>
-                    <stringProp name="Header.value">bearer ${access_token}</stringProp>
-                  </elementProp>
-                  <elementProp name="" elementType="Header">
-                    <stringProp name="Header.name">content-type</stringProp>
-                    <stringProp name="Header.value">application/json;charset=UTF-8</stringProp>
-                  </elementProp>
-                </collectionProp>
-              </HeaderManager>
-              <hashTree/>
-              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
-                <collectionProp name="Asserion.test_strings">
-                  <stringProp name="723337899">&quot;code&quot;:200</stringProp>
+                  <stringProp name="948608646">&quot;code&quot;:1000</stringProp>
+                  <stringProp name="-222482771">&quot;msg&quot;:&quot;时间段格式错误&quot;</stringProp>
                 </collectionProp>
                 <stringProp name="Assertion.custom_message"></stringProp>
                 <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
