@@ -195,9 +195,9 @@ under the License.
         </profile>
 
         <profile>
-            <id>TestAPI_System</id>
+            <id>APITest_ShopAddCard_UAT</id>
             <properties>
-                <jmeter.fileName>TestAPI_System</jmeter.fileName>
+                <jmeter.fileName>APITest_ShopAddCard_UAT</jmeter.fileName>
             </properties>
         </profile>
 
