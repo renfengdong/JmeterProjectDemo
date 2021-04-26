@@ -201,5 +201,12 @@ under the License.
             </properties>
         </profile>
 
+        <profile>
+            <id>TestAPI_SyncPaid</id>
+            <properties>
+                <jmeter.fileName>TestAPI_SyncPaid</jmeter.fileName>
+            </properties>
+        </profile>
+
     </profiles>
 </settings>

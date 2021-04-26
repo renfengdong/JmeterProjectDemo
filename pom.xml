@@ -14,8 +14,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-                <jmeter.fileName>${jmeter.fileName}</jmeter.fileName>
-<!--        <jmeter.fileName>APITest_ShopAddCard_UAT</jmeter.fileName>-->
+        <jmeter.fileName>${jmeter.fileName}</jmeter.fileName>
+<!--        <jmeter.fileName>TestAPI_SyncPaid</jmeter.fileName>-->
     </properties>
 
     <dependencies>
